@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IController</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,-25"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <nav class="col-md-2 navbar-vertical">
+          <div class="d-flex flex-column flex-shrink-0 p-3">
+            <a
+              href="#"
+              class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+            >
+              <span class="fs-4">IController</span>
+            </a>
+            <hr />
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Parâmetros</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active">Extrato Bancário</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Serviços Contratados</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="col-md-10">
+          <div class="title">
+            <div class="navbar-toggle">
+              <button class="btn" id="toggleBtn">
+                <span>&#9776;</span>
+              </button>
+            </div>
+            <h3 class="text-title">Extrato Bancário</h3>
+          </div>
+          <div class="container-fluid content">
+            <!--btn extrair extrato  -->
+            <div class="btn-extract">
+              <button type="button" class="btn" id="btn">
+                <div class="row">
+                  <div class="col-md-9">Extrair extrato</div>
+                  <div class="col-md-3">
+                    <span class="material-symbols-outlined"> ios_share </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <!-- Periodo -->
+
+            <div class="periodo">
+              <label class="label-period">Selecione o período</label>
+
+              <div class="input-date">
+                <input type="month" class="date" value="2022-12" />
+              </div>
+            </div>
+
+            <!-- table -->
+            <div class="card-table">
+              <div class="row card">
+                <div class="card-header">
+                  <div class="col-md-12 search">
+                    <div class="button-search">
+                      <span class="material-symbols-outlined icon-search">
+                        search
+                      </span>
+                    </div>
+                    <div class="col-md-10">
+                      <input
+                        type="search"
+                        class="input-search"
+                        placeholder="Buscar"
+                        aria-label="Search through site content"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <table class="table">
+                  <th class="title-table"></th>
+                  <th class="title-table">Descrição</th>
+                  <th class="title-table">Valor</th>
+                  <th class="title-table">Data</th>
+                  <tbody>
+                    <tr class="table-line">
+                      <td>
+                        <div class="down">
+                          <span class="material-symbols-outlined">
+                            trending_down
+                          </span>
+                        </div>
+                      </td>
+                      <td>PIX enviado</td>
+                      <td>R$ 50,00</td>
+                      <td>11/12/2022</td>
+                    </tr>
+                    <tr class="table-line">
+                      <td>
+                        <div class="up">
+                          <span class="material-symbols-outlined">
+                            trending_up
+                          </span>
+                        </div>
+                      </td>
+                      <td>PIX enviado</td>
+                      <td>R$ 100,00</td>
+                      <td>05/12/2022</td>
+                    </tr>
+                    <tr class="table-line">
+                      <td>
+                        <div class="up">
+                          <span class="material-symbols-outlined">
+                            trending_up
+                          </span>
+                        </div>
+                      </td>
+                      <td>PIX recebido</td>
+                      <td>R$ 80,00</td>
+                      <td>03/12/2022</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("toggleBtn")
+        .addEventListener("click", function () {
+          var navbar = document.querySelector(".navbar-vertical");
+
+          navbar.style.display =
+            navbar.style.display === "none" ? "block" : "none";
+        });
+
+      // Mostrar navbar em telas maiores
+      window.addEventListener("resize", function () {
+        var navbar = document.querySelector(".navbar-vertical");
+        if (window.innerWidth >= 768) {
+          navbar.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Cap 5 - Agregando ao modelo de dados - Modelo Lógico de uma agenda de contatos -  Nikolas Soares Moreira - 550292" id="FA9FA22F-44D2-D62E-A4D1-102AE98126E4" version="3.5">
+<createdBy>nikol</createdBy>
+<createdTime>2023-05-21 22:33:59 UTC</createdTime>
+<ownerDesignName>Cap 5 - Agregando ao modelo de dados - Modelo Lógico de uma agenda de contatos -  Nikolas Soares Moreira - 550292</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>FA9FA22F-44D2-D62E-A4D1-102AE98126E4</designId>
+</OSDM_Design>
